@@ -5,6 +5,7 @@ const NavBar = () => {
     <nav>
       <ul>
         <li><Link to="/">Kevin Harrington</Link></li>
+        <br/>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/project">Project</Link></li>
