@@ -1,17 +1,20 @@
 import { projects } from "../data/projects"
+import { useParams } from "react-router-dom"
+import findProject from "../utilities/findProject"
 
 function ProjectDetails  () {
-  
+    const { projectDetails } = useParams()
+    const projectData = findProject(projectDetails)
   return (
 
     <>
-      <h1>{projects[0].title}</h1>
-      <p>{projects[0].description}</p>
+      <h1>{projectData.title}</h1>
+      <p>{projectData.description}</p>
       <img 
-      src={projects[0].image} alt={projects.title} />
+      src={projectData.image} alt={projectData.title} />
       <button>
         <a
-        href={projects[0].repositoryLink}
+        href={projectData.repositoryLink}
         target="_blank"
         rel="noreferrer"
         className="link-buttons"
@@ -21,7 +24,7 @@ function ProjectDetails  () {
         </button>
       <button>
         <a
-        href={projects[0].deploymentLink}
+        href={projectData.deploymentLink}
         target="_blank"
         rel="noreferrer"
         className="link-buttons"
