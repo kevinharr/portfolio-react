@@ -9,7 +9,7 @@ const ProjectPreview = (props) => {
         alt={props.title}
       />
       <section>
-      <button><Link to="/projects/:hyphenateWords({props.title})">Learn More</Link> </button>
+     <Link to="/projects/:({hyphenateWords(props.title)})"> <button>Learn More</button></Link> 
       </section>     
     </div>
   )
