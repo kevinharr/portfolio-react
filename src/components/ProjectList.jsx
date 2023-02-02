@@ -7,7 +7,11 @@ const ProjectList = (props) => {
 		{props.projects.map(project =>
 			<ul>
 				<li  >
-					<ProjectPreview key={project.id} project={project}/>	
+					<ProjectPreview 
+					key={project.id} 
+					title={project.title}
+					image={project.image}
+					/>	
 				</li>
 			</ul>
 		)}
