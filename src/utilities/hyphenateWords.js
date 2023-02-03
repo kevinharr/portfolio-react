@@ -1,5 +1,5 @@
 function hyphenateWords(str) {
-	return str.toLowerCase().replace(/\s+/g, '-');
+	return `projects/${str.toLowerCase().replace(/\s+/g, '-')}`;
       }
       
 export default hyphenateWords
