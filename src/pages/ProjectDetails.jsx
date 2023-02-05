@@ -4,7 +4,9 @@ import findProject from "../utilities/findProject"
 
 function ProjectDetails  () {
     const { projectDetails } = useParams()
+    console.log("projectDetails before findProject:", projectDetails)
     const projectData = findProject(projectDetails)
+    console.log("projectData after findProject:", projectData)
   return (
     <>
       <h1>{projectData.title}</h1>

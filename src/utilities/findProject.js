@@ -2,9 +2,18 @@ import { projects } from "../data/projects"
 import hyphenateWords from "./hyphenateWords"
 
 function findProject(str) {
-  const project = projects.find(project => hyphenateWords(project.title) === str
-  )
-  return project
+  console.log("this is a string", str)
+  const noSpaces = str.replace(" ", "")
+  const foundProject = projects.find(project => {
+    const thisTitle = hyphenateWords(project.title)
+    console.log("this is thisTitle", thisTitle)
+    return thisTitle === noSpaces
+    
+
+  
+})
+console.log("this is project title", foundProject)
+return foundProject
 }
 
 
